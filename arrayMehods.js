@@ -25,14 +25,29 @@
 // }
 
 //******include()******** */
-var a = ["Shivam", "Abdul", "Rishabh", "Aditya"];
-document.write(a + "<br> <br>");
+// var a = ["Shivam", "Abdul", "Rishabh", "Aditya"];
+// document.write(a + "<br> <br>");
 
-var b= a.includes("Shivam");
-document.write(b + "<br> <br>");//true
+// var b= a.includes("Shivam");
+// document.write(b + "<br> <br>");//true
 
-b= a.includes("Neha");
+// b= a.includes("Neha");
+// document.write(b + "<br> <br>");//false
+
+// b = a.includes("aditya");//case sensitive
+// document.write(b + "<br> <br>");//false
+
+
+//***************************some() & every()********************** */ some() checks if any of the elements in an array pass a test & every() checks if all of the elements in the array pass a tesst 
+var ages = [10,13,17,11];
+document.write(ages + "<br> <br>");
+
+var b = ages.some(checkAdult);
+document.write(b + "<br> <br>");
+
+b= ages.every(checkAdult);
 document.write(b + "<br> <br>");//false
 
-b = a.includes("aditya");//case sensitive
-document.write(b + "<br> <br>");//false
+function checkAdult(age){
+    return age >= 18;//false because no value inside array is greater than or equal to 18
+}
