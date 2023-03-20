@@ -39,15 +39,34 @@
 
 
 //***************************some() & every()********************** */ some() checks if any of the elements in an array pass a test & every() checks if all of the elements in the array pass a tesst 
-var ages = [10,13,17,11];
+// var ages = [10,13,17,11];
+// document.write(ages + "<br> <br>");
+
+// var b = ages.some(checkAdult);
+// document.write(b + "<br> <br>");
+
+// b= ages.every(checkAdult);
+// document.write(b + "<br> <br>");//false
+
+// function checkAdult(age){
+//     return age >= 18;//false because no value inside array is greater than or equal to 18
+// }
+
+
+// **********************************find() & findIndex()***********************************************
+// find() it gives the first value which passes the test of the condition
+//  findIndex() it gives the index of first value which passes the test case . these both stops working after finding the first value
+var ages = [10, 13, 17, 11];
 document.write(ages + "<br> <br>");
 
-var b = ages.some(checkAdult);
-document.write(b + "<br> <br>");
+b = ages.find(checkAdult);
+document.write(b + "<br> <br>");//undefined because no value passes the test case of checkadult function that is no age is greater than 18
 
-b= ages.every(checkAdult);
-document.write(b + "<br> <br>");//false
-
-function checkAdult(age){
-    return age >= 18;//false because no value inside array is greater than or equal to 18
+function checkAdult(age) {
+    return age >= 18; 
 }
+
+ages.push(25);//it will push 25 inside the array 
+
+b = ages.findIndex(checkAdult);
+document.write(b + "<br> <br>");//4 because the index value of 25 which is greater then 18 is 4
