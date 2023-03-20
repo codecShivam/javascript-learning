@@ -74,13 +74,27 @@
 //******************************filter()*********************** */
 //it is used to create an array filled with all array elements that pass a test
 
-var ages = [10, 13, 17, 11,23,19];
-document.write(ages + "<br> <br>");
+// var ages = [10, 13, 17, 11,23,19];
+// document.write(ages + "<br> <br>");
 
-var b = ages.filter(checkAdult);
-document.write(b + "<br> <br>");//an array of value 23 and 18
+// var b = ages.filter(checkAdult);
+// document.write(b + "<br> <br>");//an array of value 23 and 18
 
-function checkAdult(age) {
-        return age >= 18; 
-    }
+// function checkAdult(age) {
+//         return age >= 18; 
+//     }
+
+
+
+//************************toString()********************* */
+var a = ["Shivam", "Abdul", "Rishabh", "Aditya"];
+// a.toString();////an string not work as array anymore
+// document.write(a);
+
+//fill() fills all the elements in an array with a static value
+a.fill("ram");
+document.write(a);
+
+
+
 
