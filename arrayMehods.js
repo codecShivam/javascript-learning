@@ -56,17 +56,31 @@
 // **********************************find() & findIndex()***********************************************
 // find() it gives the first value which passes the test of the condition
 //  findIndex() it gives the index of first value which passes the test case . these both stops working after finding the first value
-var ages = [10, 13, 17, 11];
+// var ages = [10, 13, 17, 11];
+// document.write(ages + "<br> <br>");
+
+// b = ages.find(checkAdult);
+// document.write(b + "<br> <br>");//undefined because no value passes the test case of checkadult function that is no age is greater than 18
+
+// function checkAdult(age) {
+//     return age >= 18; 
+// }
+
+// ages.push(25);//it will push 25 inside the array 
+
+// b = ages.findIndex(checkAdult);
+// document.write(b + "<br> <br>");//4 because the index value of 25 which is greater then 18 is 4
+
+//******************************filter()*********************** */
+//it is used to create an array filled with all array elements that pass a test
+
+var ages = [10, 13, 17, 11,23,19];
 document.write(ages + "<br> <br>");
 
-b = ages.find(checkAdult);
-document.write(b + "<br> <br>");//undefined because no value passes the test case of checkadult function that is no age is greater than 18
+var b = ages.filter(checkAdult);
+document.write(b + "<br> <br>");//an array of value 23 and 18
 
 function checkAdult(age) {
-    return age >= 18; 
-}
+        return age >= 18; 
+    }
 
-ages.push(25);//it will push 25 inside the array 
-
-b = ages.findIndex(checkAdult);
-document.write(b + "<br> <br>");//4 because the index value of 25 which is greater then 18 is 4
