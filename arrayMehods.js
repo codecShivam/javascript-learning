@@ -87,13 +87,16 @@
 
 
 //************************toString()********************* */
-var a = ["Shivam", "Abdul", "Rishabh", "Aditya"];
-// a.toString();////an string not work as array anymore
+// var a = ["Shivam", "Abdul", "Rishabh", "Aditya"];
+// // a.toString();////an string not work as array anymore
+// // document.write(a);
+
+// //fill() fills all the elements in an array with a static value
+// a.fill("ram");
 // document.write(a);
 
-//fill() fills all the elements in an array with a static value
-a.fill("ram");
-document.write(a);
+
+
 
 
 
